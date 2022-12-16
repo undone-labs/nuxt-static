@@ -170,7 +170,7 @@ const registerRoutes = (instance) => {
     if (Fs.existsSync(`${rootDir}/content/blog`)) {
       const paths = Fs.readdirSync(`${rootDir}/content/blog`)
         .filter(file => file.includes('.md'))
-        .map(file => `/${file.split('.md')[0]}`)
+        .map(file => `/blog/${file.split('.md')[0]}`)
       if (paths.length > 0) {
         routes = routes.concat(paths)
       }
