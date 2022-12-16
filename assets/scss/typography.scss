@@ -1,0 +1,122 @@
+// ////////////////////////////////////////////////////////////////// Typography
+// -----------------------------------------------------------------------------
+
+// -------------------------------------------------------------------- Families
+$font_Primary: Helvetica;
+$font_Secondary: 'EB Garamond';
+$font_Code: monospace;
+
+// --------------------------------------------------------------------- Leading
+@function leading($lineHeight, $fontSize) {
+  @return math.div(math.round(10 * math.div($lineHeight, $fontSize)), 10);
+}
+
+// -------------------------------------------------------------- Letter Spacing
+$letterSpacing_Regular: 0.02em;
+$letterSpacing_Large: 0.03em;
+
+// ////////////////////////////////////////////////////////////////////// Mixins
+// -----------------------------------------------------------------------------
+
+// ------------------------------------------------------ Typography | Font Size
+@mixin fontSize_Mini { font-size: 0.875rem; } // fontSize_Mini | 14px
+@mixin fontSize_Small { font-size: 1rem; } // fontSize_Small | 16px
+@mixin fontSize_Regular { font-size: 1.125rem; } // fontSize_Regular | 18px
+@mixin fontSize_Medium { font-size: 1.5rem; } // fontSize_Medium | 24px
+@mixin fontSize_Large { font-size: 1.875rem; } // fontSize_Large | 30px
+@mixin fontSize_ExtraLarge { font-size: 2.8125rem; } // fontSize_ExtraLarge | 45px
+@mixin fontSize_Huge { font-size: 4.0625rem; } // fontSize_Huge | 65px
+
+
+// ---------------------------------------------------- Typography | Font Weight
+@mixin fontWeight_Light{ font-weight: 300; }
+@mixin fontWeight_Regular { font-weight: 400; }
+@mixin fontWeight_Medium { font-weight: 500; }
+@mixin fontWeight_Semibold { font-weight: 600 }
+@mixin fontWeight_Bold { font-weight: 700 }
+
+// --------------------------------------------------------- Typography | Groups
+@mixin h1 {
+  @include fontSize_Huge; // 65px
+  @include fontWeight_Regular; // 400
+  font-family: $font_Secondary;
+  line-height: leading(85, 65);
+}
+
+@mixin h2 {
+  @include fontSize_ExtraLarge; // 45px
+  @include fontWeight_Regular; // 400
+  font-family: $font_Secondary;
+  line-height: leading(60, 45);
+}
+
+@mixin h3 {
+  @include fontSize_Large; // 30px
+  @include fontWeight_Regular; // 400
+  font-family: $font_Secondary;
+  line-height: leading(42, 30);
+}
+
+@mixin h4 {
+  @include fontSize_Medium; // 24px
+  @include fontWeight_Regular; // 400
+  font-family: $font_Secondary;
+  line-height: leading(36, 24);
+}
+
+@mixin h5 {
+  @include fontSize_Medium; // 24px
+  @include fontWeight_Medium; // 500
+  font-family: $font_Primary;
+  line-height: leading(36, 24);
+}
+
+@mixin h6 {
+  @include fontSize_Regular; // 18px
+  @include fontWeight_Medium; // 500
+  font-family: $font_Primary;
+  line-height: leading(30, 18);
+}
+
+@mixin h7 {
+  @include fontSize_Small; // 16px
+  @include fontWeight_Medium; // 500
+  font-family: $font_Primary;
+  line-height: leading(26, 16);
+}
+
+@mixin p1 {
+  @include fontSize_Regular; // 18px
+  @include fontWeight_Regular; // 400
+  font-family: $font_Primary;
+  line-height: leading(30, 18);
+}
+
+@mixin p1Link{
+  @include fontSize_Regular; // 18px
+  @include fontWeight_Medium; // 500
+  font-family: $font_Primary;
+  line-height: leading(30, 18);
+  color: $color_Primary;
+}
+
+@mixin p2 {
+  @include fontSize_Small; // 16px
+  @include fontWeight_Regular; // 400
+  font-family: $font_Primary;
+  line-height: leading(28, 16);
+}
+
+@mixin p2Link{
+  @include fontSize_Small; // 16px
+  @include fontWeight_Semibold; // 600
+  font-family: $font_Primary;
+  line-height: leading(24, 16);
+}
+
+@mixin caption {
+  @include fontSize_Mini; // 14px
+  @include fontWeight_Regular; // 400
+  font-family: $font_Primary;
+  line-height: leading(21, 14);
+}

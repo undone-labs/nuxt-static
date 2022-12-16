@@ -1,0 +1,28 @@
+// //////////////////////////////////// Custom classes for section, grid and col
+// -----------------------------------------------------------------------------
+
+// ------------------------------------------------------------------ Sectionals
+.sectionals {
+  position: relative;
+}
+
+.sectional {
+  margin-bottom: toRem(100);
+  position: relative;
+  z-index: 2;
+  min-height: toRem(30);
+  @include medium {
+    margin-bottom: toRem(90);
+  }
+  // add margin bottom for first col and if col is marked first
+  [class*=grid-] > [class*=md-first],
+  [class*=grid-] > [class*=col-]:first-child {
+    @include medium {
+      margin-bottom: toRem(34);
+    }
+  }
+  // remove margin bottom if marked last
+  [class*=grid-] > [class*=md-last][class*=col-]:first-child {
+    margin-bottom: 0;
+  }
+}

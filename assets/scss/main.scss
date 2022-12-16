@@ -1,0 +1,273 @@
+// ///////////////////////////////////////////////////////// Imports & Variables
+// -----------------------------------------------------------------------------
+@import 'normalize';
+@import 'grid/gridlex-2.7.1';
+
+$fontAssetPath: '~assets/fonts';
+
+/////////////////////////////////////////////////////////////////// Custom Fonts
+// -----------------------------------------------------------------------------
+@font-face {
+  font-family: 'EB Garamond';
+  font-style: normal;
+  font-weight: 400 800;
+  font-display: swap;
+  src: url('#{$fontAssetPath}/eb-garamond/eb-garamond-variable.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'EB Garamond';
+  font-style: italic;
+  font-weight: 400 800;
+  font-display: swap;
+  src: url('#{$fontAssetPath}/eb-garamond/eb-garamond-i-variable.woff2') format('woff2');
+}
+
+// ///////////////////////////////////////////////////////////////////// General
+// -----------------------------------------------------------------------------
+html, body {
+  @include fontWeight_Regular;
+  font-family: $font_Primary;
+  line-height: leading(28, 16);
+  font-size: 16px;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  scroll-behavior: smooth;
+  ::selection,
+  ::-moz-selection {
+    background: $color_Primary;
+    color: white;
+  }
+  &.no-scroll {
+    overflow-y: hidden;
+  }
+  &.no-cursor {
+    cursor: none;
+  }
+  * {
+    box-sizing: border-box;
+    &:before,
+    &:after {
+      box-sizing: border-box;
+    }
+  }
+}
+
+a, button, ul {
+  background-color: transparent;
+  text-decoration: none;
+  color: inherit;
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+a, button {
+  cursor: pointer;
+}
+
+img {
+  display: block;
+}
+
+::-webkit-file-upload-button {
+  cursor: pointer;
+}
+
+// ///////////////////////////////////////////////////////////////// Nuxt & Grid
+// -----------------------------------------------------------------------------
+#__nuxt {
+  position: relative;
+}
+
+#__layout {
+  overflow: hidden;
+  .master-container {
+    position: relative;
+  }
+}
+
+.layout {
+  position: relative;
+  z-index: 100;
+}
+
+[class~="grid"],
+[class*="grid-"],
+[class*="grid_"] {
+  width: $containerWidth;
+  margin: 0 auto;
+  @include customMaxMQ ($containerWidth + 4rem) {
+    padding: 0 7%;
+    width: 100%;
+  }
+  &[class*="-noGutter"] {
+    margin: 0 auto;
+  }
+  &.no-padding {
+    padding: 0;
+  }
+  [class~="grid"],
+  [class*="grid-"],
+  [class*="grid_"] {
+    width: 100%;
+    padding: 0;
+  }
+}
+
+// ////////////////////////////////////////////////////////////////// Typography
+// -----------------------------------------------------------------------------
+h1, .h1 {
+  @include h1;
+}
+
+h2, .h2 {
+  @include h2;
+}
+
+h3, .h3 {
+  @include h3;
+}
+
+h4, .h4 {
+  @include h4;
+}
+
+h5, .h5 {
+  @include h5;
+}
+
+h6, .h6 {
+  @include h6;
+}
+
+p {
+  @include p1;
+  margin-bottom: 1rem;
+}
+
+.p1 {
+  @include p1;
+}
+
+.p2 {
+  @include p2;
+}
+
+a {
+  @include p1Link;
+}
+
+strong {
+  font-weight: 500;
+}
+
+caption {
+  @include caption;
+}
+
+// ////////////////////////////////////////////////////////////////// Components
+// -----------------------------------------------------------------------------
+.video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+}
+
+.button-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 1rem;
+  .button {
+    &:not(:last-child) {
+      margin-right: 1rem;
+    }
+  }
+}
+
+// ///////////////////////////////////////////////////////////// Basic Templates
+// -----------------------------------------------------------------------------
+img {
+  width: 100%;
+}
+
+hr {
+  position: relative;
+  border: 2px solid $color_Primary;
+  border-radius: $borderRadius_Medium;
+  margin: 3rem 0;
+}
+
+// /////////////////////////////////////////////////////////////////// Codeblock
+// -----------------------------------------------------------------------------
+pre {
+  padding: 2rem 1rem;
+  background-color: black;
+  border-radius: $borderRadius_Large;
+  code {
+    @include fontWeight_Regular;
+    color: white;
+    font-family: $font_Code;
+  }
+}
+
+code {
+  @include fontWeight_Regular;
+  @include fontSize_Small;
+  color: black;
+  font-family: $font_Code;
+}
+
+// /////////////////////////////////////////////////////////////////////// Table
+// -----------------------------------------------------------------------------
+table {
+  border-collapse: collapse;
+  border: none;
+  border-radius: $borderRadius_Large;
+  width: 100%;
+  tr {
+    &:not(:last-child) {
+      border-bottom: 2px solid $color_Primary;
+    }
+  }
+  tr:first-child {
+    th:first-child, td:last-child {
+      border-top-left-radius: $borderRadius_Large;
+    }
+    th:last-child, td:last-child {
+      border-top-right-radius: $borderRadius_Large;
+    }
+  }
+  tr:last-child {
+    td:first-child {
+      border-bottom-left-radius: $borderRadius_Large;
+    }
+    td:last-child {
+      border-bottom-right-radius: $borderRadius_Large;
+    }
+  }
+  th, td {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  th {
+    @include h4;
+    background-color: $color_Primary;
+    color: white;
+  }
+  td {
+    @include p1;
+    border-left: 2px solid $color_Primary;
+    &:nth-child(1) {
+      border-left: 0;
+    }
+  }
+}

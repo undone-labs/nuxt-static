@@ -1,0 +1,11 @@
+.nuxt
+dist
+node_modules
+.nuxt-storybook
+storybook-static
+
+/modules/zero/core/plugins/global-components.js
+/modules/zero/core/plugins/index.js
+/modules/zero/filters/plugins/global-components.js
+/modules/zero/filters/plugins/index.js
+/modules/zero/pagination/plugins/global-components.js

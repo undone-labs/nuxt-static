@@ -1,0 +1,78 @@
+{
+  "seo": {
+    "title": "Nuxt Static Boilerplate",
+    "description": ""
+  },
+  "og": {
+    "site_name": "Nuxt Static Boilerplate",
+    "url": "https://au-nuxt-static.on.fleek.co",
+    "type": "website",
+    "image": "/images/open-graph.png"
+  },
+  "header": {
+    "ctas": [
+      {
+        "type": "solid",
+        "text": "Hello World",
+        "url": "/blog/hello-world"
+      }
+    ],
+    "nav": [
+      {
+        "text": "Storybook",
+        "type": "underline",
+        "url": "https://au-nuxt-static.on.fleek.co"
+      }
+    ]
+  },
+  "footer": {
+    "copyright": "Made with ❤️ by AU",
+    "social": [
+      {
+        "id": "facebook",
+        "url": "https://www.facebook.com/"
+      },
+      {
+        "id": "twitter",
+        "url": "https://twitter.com/"
+      },
+      {
+        "id": "linkedin",
+        "url": "https://www.linkedin.com/company/"
+      },
+      {
+        "id": "youtube",
+        "url": "https://www.youtube.com/user/"
+      }
+    ]
+  },
+  "page_404": {
+    "page_content": {
+      "section_hero_404": {
+        "grid": [
+          "middle",
+          "center",
+          "noGutter"
+        ],
+        "col_1": {
+          "cols": {
+            "num": "col-6_md-12",
+            "push_left": "",
+            "push_right": ""
+          },
+          "label": "404",
+          "heading": "Whoops, this page doesn't exist",
+          "align": "center",
+          "type": "text_block",
+          "ctas": [
+            {
+              "type": "solid",
+              "text": "Back to Homepage",
+              "url": "/"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "seo": {
+    "title": "AU Nuxt Static Boilerplate",
+    "description": ""
+  },
+  "og": {
+    "title": "AU Nuxt Static Boilerplate",
+    "url": "https://au-nuxt-static.on.fleek.co",
+    "type": "website",
+    "image": "/images/open-graph.png"
+  },
+  "page_content": {
+    "section_text_center": {
+      "grid": [
+        "middle",
+        "center",
+        "noGutter"
+      ],
+      "col_1": {
+        "type": "markdown_block",
+        "cols": {
+          "num": "col-10_md-12",
+          "push_left": "off-1_md-0",
+          "push_right": "off-1_md-0"
+        },
+        "content": "# this is another page"
+      },
+      "hide": false
+    }
+  }
+}

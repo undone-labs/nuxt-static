@@ -1,0 +1,68 @@
+{
+  "name": "@agency-undone/nuxt-static",
+  "version": "1.0.0",
+  "description": "Agency Undone's Boilerplate for Static Sites using Nuxt 2",
+  "homepage": "",
+  "license": "(UNLICENSED and Apache-2.0)",
+  "author": "Agency Undone",
+  "scripts": {
+    "prepare": "husky install",
+    "dev": "node_modules/.bin/nuxt",
+    "start": "node_modules/.bin/nuxt start",
+    "build": "node_modules/.bin/nuxt build",
+    "generate": "node_modules/.bin/nuxt generate --fail-on-error && npm run generate-version-file && ./scripts/housekeeping.sh",
+    "lint": "eslint . --ext .js,.vue",
+    "test-build": "cypress run",
+    "storybook": "node_modules/.bin/nuxt storybook",
+    "storybook-build": "node_modules/.bin/nuxt storybook build",
+    "generate-version-file": "touch dist/version.txt && git rev-parse --short HEAD >> dist/version.txt && date >> dist/version.txt"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/agency-undone/nuxt-static.git"
+  },
+  "keywords": [
+    "nuxt-boilerplate",
+    "agency-undone"
+  ],
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=7.x"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.1.2",
+    "@commitlint/config-conventional": "^17.1.0",
+    "husky": "^8.0.1",
+    "@babel/core": "^7.17.3",
+    "@babel/eslint-parser": "^7.17.0",
+    "@babel/runtime-corejs3": "^7.19.4",
+    "@nuxtjs/eslint-config": "^8.0.0",
+    "@nuxtjs/eslint-module": "^3.0.2",
+    "@nuxtjs/storybook": "^4.3.2",
+    "core-js": "^3.25.5",
+    "cypress": "^10.10.0",
+    "eslint": "^8.3.0",
+    "eslint-plugin-cypress": "^2.12.1",
+    "eslint-plugin-nuxt": "^3.0.0",
+    "raw-loader": "^4.0.2",
+    "sass": "^1.43.5",
+    "sass-loader": "^10.1.1",
+    "vue": "^2.6.14",
+    "vue-ls": "^4.2.0",
+    "vue-uuid": "^2.0.2",
+    "vuex": "^3.6.2",
+    "webpack": "^4.46.0"
+  },
+  "dependencies": {
+    "kramed": "^0.5.6",
+    "@nuxt/content": "^1.15.1",
+    "@nuxtjs/axios": "^5.13.6",
+    "@nuxtjs/google-analytics": "^2.4.0",
+    "@nuxtjs/gtm": "^2.4.0",
+    "@nuxtjs/moment": "^1.6.1",
+    "@nuxtjs/sitemap": "^2.4.0",
+    "@nuxtjs/style-resources": "^1.2.1",
+    "nuxt": "^2.15.4",
+    "nuxt-hammer": "^2.1.3"
+  }
+}

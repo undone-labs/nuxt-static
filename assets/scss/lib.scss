@@ -1,0 +1,51 @@
+$sampleGradient: linear-gradient(100deg, teal 0%, tomato 33%, white 100%);
+$elongatedSampleGradient: linear-gradient(90deg, white 0%, white 33%, teal 54.78%, salmon 66%, purple 100%);
+
+@mixin gradientText {
+  @include sampleGradient;
+  background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  text-fill-color: transparent;
+  // IE11 fix
+  @include IE10and11 {
+    background: none;
+  }
+  &::-moz-selection {
+    -webkit-text-fill-color: #ffffff;
+    -moz-text-fill-color: #ffffff;
+    text-fill-color: #ffffff;
+  }
+  &::selection {
+    -webkit-text-fill-color: #ffffff;
+    -moz-text-fill-color: #ffffff;
+    text-fill-color: #ffffff;
+  }
+}
+
+@mixin animatedGradientText {
+  @include elongatedSampleGradient;
+  background-size: 300%;
+  background-position: 0 0;
+  background-clip: text;
+  background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  text-fill-color: transparent;
+  // IE11 fix
+  @include IE10and11 {
+    background: none;
+  }
+  &::-moz-selection {
+    -webkit-text-fill-color: #ffffff;
+    -moz-text-fill-color: #ffffff;
+    text-fill-color: #ffffff;
+  }
+  &::selection {
+    -webkit-text-fill-color: #ffffff;
+    -moz-text-fill-color: #ffffff;
+    text-fill-color: #ffffff;
+  }
+}

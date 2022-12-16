@@ -1,0 +1,224 @@
+// /////////////////////////////////////////////////////////////////// Normalize
+// -----------------------------------------------------------------------------
+
+// ----------------------------------------------------------------------  Fonts
+$font_0: sans-serif;
+$font_1: monospace;
+
+// ---------------------------- @extend-elements / original selectors / sub, sup
+%extend_1 {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+// -------------- Original selectors / button, input, optgroup, select, textarea
+%extend_2 {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+html {
+  font-family: $font_0;
+  input[type="button"] {
+    cursor: pointer;
+  }
+  input[disabled] {
+    cursor: default;
+  }
+}
+body {
+  margin: 0;
+}
+aside,
+article,
+details,
+figcaption,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+figure {
+  display: block;
+  margin: 1em 40px;
+}
+audio {
+  display: inline-block;
+  vertical-align: baseline;
+  &:not([controls]) {
+    display: none;
+    height: 0;
+  }
+}
+video,
+progress,
+canvas {
+  display: inline-block;
+  vertical-align: baseline;
+}
+[hidden] {
+  display: none;
+}
+template {
+  display: none;
+}
+a {
+  background-color: transparent;
+  &:active {
+    outline: 0;
+  }
+  &:hover {
+    outline: 0;
+  }
+}
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+b,
+strong {
+  font-weight: bold;
+}
+dfn {
+  font-style: italic;
+}
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+mark {
+  background: yellow;
+  color: black;
+}
+small {
+  font-size: 80%;
+}
+sub {
+  @extend %extend_1;
+  bottom: -0.25em;
+}
+sup {
+  @extend %extend_1;
+  top: -0.5em;
+}
+img {
+  border: 0;
+}
+hr {
+  // Instead of the line below you could use @include box-sizing($bs)
+  box-sizing: content-box;
+  height: 0;
+}
+pre {
+  overflow: auto;
+  font-family: $font_1, $font_1;
+  font-size: 1em;
+}
+code {
+  font-family: $font_1, $font_1;
+  font-size: 1em;
+}
+kbd {
+  font-family: $font_1, $font_1;
+  font-size: 1em;
+}
+samp {
+  font-family: $font_1, $font_1;
+  font-size: 1em;
+}
+button {
+  @extend %extend_2;
+  overflow: visible;
+  text-transform: none;
+  cursor: pointer;
+}
+input {
+  @extend %extend_2;
+  line-height: normal;
+}
+optgroup {
+  @extend %extend_2;
+  font-weight: bold;
+}
+select {
+  @extend %extend_2;
+  text-transform: none;
+}
+textarea {
+  @extend %extend_2;
+  overflow: auto;
+}
+input[type="reset"] {
+  cursor: pointer;
+}
+input[type="submit"] {
+  cursor: pointer;
+}
+button[disabled] {
+  cursor: default;
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+input[type="checkbox"],
+input[type="radio"] {
+  // Instead of the line below you could use @include box-sizing($bs)
+  box-sizing: border-box;
+  padding: 0;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+input[type="search"] {
+  // Instead of the line below you could use @include box-sizing($bs)
+  box-sizing: content-box;
+}
+fieldset {
+  border: 1px solid gray;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+legend {
+  border: 0;
+  padding: 0;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+td,
+th {
+  padding: 0;
+}
+svg:not(:root) {
+  overflow: hidden;
+}
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6,
+p,
+div,
+button {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: normal;
+}
