@@ -35,7 +35,7 @@ import { mapGetters } from 'vuex'
 
 import SiteHeader from '@/components/site-header'
 import SiteFooter from '@/components/site-footer'
-import { Button } from '@/components/button'
+import Button from '@/components/button'
 import BlockBuilder from '@/components/blocks/block-builder'
 
 // ====================================================================== Export

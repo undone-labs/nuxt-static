@@ -2,7 +2,7 @@
 
 [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-%23FE5196?logo=conventionalcommits&logoColor=white)](https://conventionalcommits.org)
 
-![Nuxt Static banner](/images/alternate-graph-image.png)
+![Nuxt Static banner](https://raw.githubusercontent.com/agency-undone/nuxt-static/develop/static/images/open-graph.png)
 
 ## Overview
 

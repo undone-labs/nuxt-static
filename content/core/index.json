@@ -17,13 +17,14 @@
         "noGutter"
       ],
       "col_1": {
-        "type": "markdown_block",
+        "type": "text_block",
+        "align": "center",
         "cols": {
           "num": "col-12",
           "push_left": "off-1_md-0",
           "push_right": "off-1_md-0"
         },
-        "content": "# Welcome to AU's Nuxt Static Boilerplate"
+        "heading": "Welcome to AU's Nuxt Static Boilerplate"
       },
       "hide": false
     },

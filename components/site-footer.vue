@@ -1,14 +1,12 @@
 <template>
   <footer class="site-footer">
-    <div class="grid-center-middle">
-      <div class="col-6">
-        <p>{{ footerData.copyright }}</p>
-      </div>
-      <div class="col-6">
-        <a v-for="(icon, index) in footerData.social" :key="index" target="_blank" :href="icon.url">
-          <component :is="getButtonIcon(icon.id)" />
-        </a>
-      </div>
+    <div class="grid-center">
+      <p>{{ footerData.copyright }}</p>
+    </div>
+    <div class="grid-center site-footer-social">
+      <a v-for="(icon, index) in footerData.social" :key="index" target="_blank" :href="icon.url">
+        <component :is="getButtonIcon(icon.id)" />
+      </a>
     </div>
   </footer>
 </template>
@@ -87,5 +85,10 @@ export default {
   background-color: $color_Primary;
   color: white;
   z-index: 5;
+}
+.site-footer-social {
+  a {
+    margin: 0 toRem(10);
+  }
 }
 </style>
