@@ -23,6 +23,13 @@ This is the boilerplate repository for building static sites using Nuxt
 - The static site is deployed on Fleek
 
 
+## Setup
+
+1) Follow "build" and "self-signed certificate" instructions below
+2) Enable Github Pages for storybook deployment (Go to Github Repo > Settings > Pages > Branch - set both branch and folder to `docs`)
+3) Add repo to [Fleek](https://docs.fleek.co/) for ci/cd setup
+
+
 ## Build
 
 To build this site:
@@ -59,11 +66,13 @@ Now, navigate to your project directory, wherever the repo was cloned to, for ex
 cp -v ~/.ssh/localhost_cert.pem ~/.ssh/localhost_key.pem .
 ```
 
+
 ## Updating dependencies
 
-Please use `npm ci` in place of `npm i` when not explicitly upgrading depdendencies. `npm ci` will only install versions of packages provided in the lockfile, leading to more stability. 
+Please use `npm ci` in place of `npm i` when not explicitly upgrading dependencies. `npm ci` will only install versions of packages provided in the lockfile, leading to more stability. 
 
 Always regression test the site if upgrading packages, as they may contain breaking changes.
+
 
 ## Lint
 
@@ -86,6 +95,7 @@ Commit messages should use the [Conventional Commit](https://www.conventionalcom
 - `docs:` Documentation-related changes
 - `content:` Changes to the project's content, such as copy or media
 
+
 ## Storybook
 
 To better display the components available on the site, their properties, and the states they might appear in, a Storybook app is included in this repo.
@@ -93,7 +103,7 @@ To better display the components available on the site, their properties, and th
 - Each component that's developed must have its own story
 - Use `npm run storybook` to run Storybook locally
 - Or `npm run storybook-build` to generate a static Storybook UI website
-- Storybook automatically deploys to [https://agency-undone.github.io/nuxt-static](https://agency-undone.github.io/nuxt-static) using Github pages
+- Storybook automatically deploys to [https://agency-undone.github.io/nuxt-static](https://agency-undone.github.io/nuxt-static) using Github pages. The static build is stored in `docs` branch under `docs` folder
 
 
 ## Style guide
@@ -102,3 +112,16 @@ To better display the components available on the site, their properties, and th
 2. All component names on import will be `PascalCase`
 3. The grid used is a flexbox style system called [Gridlex](https://gridlex.devlint.fr/), its documentation is also available as a [readme in this repo](packages/site/assets/scss/grid/README.md)
 4. Color name variables in `SCSS` are obtained from [this resource](https://chir.ag/projects/name-that-color/)
+
+
+## [Release Please](https://github.com/googleapis/release-please)
+
+- Release Please automates CHANGELOG generation, the creation of GitHub releases, and version bumps for your projects. 
+- It is currently setup as a github action in this repo
+- See [documentation](https://github.com/googleapis/release-please) on how to use
+
+
+## [Cypress](https://go.cypress.io/) as e2e test
+
+- Cypress is setup as e2e test for the repo
+- See [documentation](https://go.cypress.io/) on how to use
