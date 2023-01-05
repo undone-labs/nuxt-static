@@ -102,7 +102,7 @@
       },
       "col_3": {
         "heading": "Page Template",
-        "description": "Pages are auto generated when json file is added to content/page. Only top level supported with this method",
+        "description": "Pages are auto generated when json file is added to <code>/content/page</code>`. Only top level tier support at the moment",
         "ctas": [
           {
             "type": "solid",
