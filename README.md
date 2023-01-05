@@ -20,14 +20,13 @@ This is the boilerplate repository for building static sites using Nuxt
 - Requires nodeJS and has been tested on node 16
 - Uses a Vue framework, [nuxtJS 2](https://nuxtjs.org/), deployed in static mode
 - Styles are written in SCSS, and are concatenated and tree-shaken during compile-time
-- The static site is deployed on Fleek
 
 
 ## Setup
 
 1) Follow "build" and "self-signed certificate" instructions below
 2) Enable Github Pages for storybook deployment (Go to Github Repo > Settings > Pages > Branch - set both branch and folder to `docs`)
-3) Add repo to [Fleek](https://docs.fleek.co/) for ci/cd setup
+3) Add repo to [Fleek](https://docs.fleek.co/) for ci/cd setup or any other hosting provider
 
 
 ## Build
