@@ -1,3 +1,7 @@
+‼️ This repo is now deprecated in favour of [Nuxt 3 Starter](https://github.com/undone-labs/nuxt3-starter) ‼️
+
+---
+
 # AU Nuxt Static Boilerplate
 
 [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-%23FE5196?logo=conventionalcommits&logoColor=white)](https://conventionalcommits.org)
